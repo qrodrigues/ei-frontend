@@ -1,0 +1,8 @@
+Pour démarrer le projet :
+
+- Avoir l'API Backend de démarré
+
+- Faire la commande : npm i
+- Faire la commande : npm run dev
+
+- Accèder à l'URL indiqué dans la console

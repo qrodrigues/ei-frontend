@@ -8,11 +8,13 @@
     margin-top: 20px;
 }
 
-.rwd-table th, td {
+.rwd-table th,
+td {
     padding: 2px 15px;
 }
 
-th, td:before {
+th,
+td:before {
     color: rgb(255, 217, 0);
 }
 
@@ -33,7 +35,8 @@ th, td:before {
     gap: 10px;
 }
 
-.ticketForm input, select {
+.ticketForm input,
+select {
     height: 30px;
     border: 1px solid white;
     background-color: #414141;
@@ -44,23 +47,23 @@ th, td:before {
 .sectiontitle {
     display: flex;
     justify-content: center;
-  }
-  
-  .page-title {
+}
+
+.page-title {
     margin-top: 10px;
     text-align: center;
     color: white;
     padding: 20px;
     border-radius: 30px;
-  }
+}
 
-  .no-desc {
+.no-desc {
     font-style: italic;
     color: rgb(255, 49, 49);
     font-size: 14px;
-  }
+}
 
-  .paragraphe {
+.paragraphe {
     text-align: center;
     color: white;
-  }
+}

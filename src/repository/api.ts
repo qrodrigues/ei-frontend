@@ -19,14 +19,14 @@ export async function getTickets(): Promise<Ticket[]> {
   }
 }
 
-export async function getTicket(id : number): Promise<Ticket> {
+export async function getTicket(id: number): Promise<Ticket> {
   try {
     const response = await axios.get<Ticket>(url + "tickets/" + id);
     return response.data;
   } catch (error) {
     console.log(error);
     throw new Error("erreur getting ticket");
-    
+
   }
 }
 
@@ -40,7 +40,7 @@ export async function deleteTicket(id: number): Promise<boolean> {
   }
 }
 
-export async function createTicket(title : string, description : string) {
+export async function createTicket(title: string, description: string) {
   try {
     const response = await axios.post(url + 'tickets', {
       title,
@@ -52,9 +52,9 @@ export async function createTicket(title : string, description : string) {
   }
 }
 
-export async function updateTicket(title : string, description : string, statut: string, id: number) {
+export async function updateTicket(title: string, description: string, statut: string, id: number) {
   try {
-    const response = await axios.put(url + 'tickets/'+id, {
+    const response = await axios.put(url + 'tickets/' + id, {
       title,
       description,
       statut
