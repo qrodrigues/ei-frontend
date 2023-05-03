@@ -1,0 +1,38 @@
+:root {
+    --main-color: rgb(238, 234, 197);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    border-right: 2px solid black;
+    background-color: rgb(54, 54, 54);
+    height: 50px;
+    padding: 10px;
+    color: var(--main-color);
+    border-bottom: 1px solid rgb(255, 217, 0);
+}
+
+.navbar-title a {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--main-color)
+}
+
+.navbar-content {
+    margin-left: 50px;
+}
+
+.navbar-content a {
+    display: inline-flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.navbar-content a:hover {
+    cursor: pointer;
+    color: rgb(255, 217, 0)
+}
