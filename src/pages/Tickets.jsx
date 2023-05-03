@@ -42,29 +42,34 @@ function Tickets() {
             </tr>
           </thead>
           <tbody>
-            {tickets.map(item =>
-              <tr key={item.id}>
-                <td>{item.id}</td>
-                <td>{item.title}</td>
-                {item.description ? (<td>{item.description}</td>) : <td><span className="no-desc">Pas de description</span></td>}
-                <td>{item.statut}</td>
-                <td className="actions-icons">
-                  <Link to={`/tickets/${item.id}`}>
-                    <FontAwesomeIcon
-                      icon={faPencil}
-                    />
-                  </Link>
-                  {item.statut !== 'TERMINE' ? (
-                    <a>
+            {tickets.map(item => {
+              const status = item.statut === 'AFAIRE' ? 'À faire' :
+                item.statut === 'ENCOURS' ? 'En cours' :
+                  item.statut === 'TERMINE' ? 'Terminé' : '';
+              return (
+                <tr key={item.id}>
+                  <td>{item.id}</td>
+                  <td>{item.title}</td>
+                  {item.description ? (<td>{item.description}</td>) : <td><span className="no-desc">Pas de description</span></td>}
+                  <td>{status}</td>
+                  <td className="actions-icons">
+                    <Link to={`/tickets/${item.id}`}>
                       <FontAwesomeIcon
-                        icon={faTrash}
-                        data-id={item.id}
-                        onClick={handleDelete}
+                        icon={faPencil}
                       />
-                    </a>
-                  ) : null}
-                </td>
-              </tr>)}
+                    </Link>
+                    {item.statut !== 'TERMINE' ? (
+                      <a>
+                        <FontAwesomeIcon
+                          icon={faTrash}
+                          data-id={item.id}
+                          onClick={handleDelete}
+                        />
+                      </a>
+                    ) : null}
+                  </td>
+                </tr>)
+            })}
           </tbody>
         </table>
       </div>
